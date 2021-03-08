@@ -82,13 +82,9 @@ void _launchURL() async  {
 
 //  String _url = 'https://www.govmap.gov.il/?c=195904,384801&z=8&b=0';
 //  String _url = 'https://www.govmap.gov.il/?c=' +_myITM_Lat.toString() +',' + _myITM_Long.toString() +'&z=6&b=3&lay=SUB_GUSH_ALL';
-  String _url = 'https://www.govmap.gov.il/?c=' +_myLocITM.east.toString() +',' + _myLocITM.north.toString() +'&z=10&b=3&lay=SUB_GUSH_ALL';
+  var _url = 'https://www.govmap.gov.il/?c=' +_myLocITM.east.toString() +',' + _myLocITM.north.toString() +'&z=10&b=3&lay=SUB_GUSH_ALL'+','+'PARCEL_ALL';
   await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
 }
-
-
-
-
 
 
 // void main() {
